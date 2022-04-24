@@ -1,5 +1,5 @@
 apt update && apt upgrade -y
-apt intstall git zsh openssh tmux exa tsu -y
+apt install git zsh openssh tmux exa tsu -y
 rm -rf ./*
 rm -rf ./.*
 git clone https://github.com/Qiu2zhi1zhe3/MyTermux.git ./
