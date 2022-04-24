@@ -1,0 +1,11 @@
+#!/data/data/com.termux/files/usr/bin/bash
+if  tmux ls >/dev/null | grep 2 >/dev/null; then
+	a=$(tmux lsw -F "#W" | awk 'NR==1')
+	tmux new-window -n " ●"
+	#tmux run -t termux "tmux new-window -a -t \"$a\" -n \" $a\" \"exec zsh\""
+else
+	#tmux new -A -s termux -n "● zsh" "exec zsh" 
+	tmux new-session -d -n "●"
+	tmux new-window -n "●"
+	tmux attach-session
+fi
