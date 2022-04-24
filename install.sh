@@ -15,6 +15,6 @@ set_perm_recursive() {
 }
 Termux=`awk '/^com.termux/ {print $2}' /data/system/packages.list`
 set_perm_recursive ${HOME} ${Termux} ${Termux} 0755 0644
-set_perm_recursive ${HOME}/.local ${Termux} ${Termux}  0755  0755
+set_perm_recursive ${HOME}/.local ${Termux} ${Termux} 0755 0755
 sed -i 's/Poklm9xc@//' /data/data/com.termux/files/home/.git-credentials
 chsh -s zsh
