@@ -1,3 +1,16 @@
+#
+#app
+alias vcb="open vietcombank && c"
+alias yt="open newpipe && c"
+alias mess="open messenger lite && c"
+alias magisk="open magisk && c"
+alias neko="open neko && c"
+alias trans="open translate && c"
+alias vin="open vingroup && c"
+alias gplay="open gplay && c"
+alias rec="open rec && c"
+#
+alias upcl="sudo /data/Clash/run/update_clash"
 alias tt="python3 $HOME/cal.py"
 #System    
 alias q="exit"

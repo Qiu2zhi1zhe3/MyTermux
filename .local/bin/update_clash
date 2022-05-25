@@ -1,0 +1,6 @@
+#!/system/bin/sh
+sudo scp root@hello4g.pw:/root/Clash.Meta/bin/Clash.Meta-android-arm64 /sdcard/Clash
+sudo mv -f /data/Clash/Clash /data/Clash/Clash.bk
+sudo mv /sdcard/Clash /data/Clash/Clash
+sudo /data/Clash/start.sh -k
+sudo /data/Clash/start.sh -s
