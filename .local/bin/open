@@ -4,7 +4,7 @@ launch()
 {
 	inp_name=$@
 	package=`awk -v search="$inp_name" -F"|" '$1==search {print $2}' $file`
-	am start -n $package --user 0 &> /dev/null
+	su -c am start -n $package --user 0 &> /dev/null
 	echo Launching $inp_name
 	exit
 }

@@ -1,5 +1,8 @@
 #
 #app
+alias clash="su -c sh /cust/app/customized/Backup/Clash/start.sh $1"
+alias su="su -s /data/data/com.termux/files/usr/bin/zsh"
+alias chplay="open chplay && c"
 alias vcb="open vietcombank && c"
 alias yt="open newpipe && c"
 alias mess="open messenger lite && c"

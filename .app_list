@@ -1,9 +1,10 @@
+
 vietcombank|com.VCB/.activities.home.SplashActivity
 neko|nekox.messenger/org.telegram.ui.LaunchActivity
 newpipe|org.schabi.newpipe/.MainActivity
 vingroup|com.vinpearl.myvinpearl.app/com.vinpearl.my.Launcher
 magisk|com.topjohnwu.magisk/.ui.MainActivity
-chplay|com.android.vending/com.android.vending.AssetBrowserActivity
+chplay|com.aurora.store/.view.ui.onboarding.OnboardingActivity
 aarogya setu|nic.goi.aarogyasetu/.views.SplashActivity
 adm|com.dv.adm/com.dv.get.Main
 adobe acrobat|com.adobe.reader/.AdobeReader
