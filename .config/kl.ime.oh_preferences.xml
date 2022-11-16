@@ -20,7 +20,7 @@
     <string name="I.bk"></string>
     <string name="S.emj1">★&#10;☆&#10;✦&#10;✧&#10;✩&#10;✪&#10;✫&#10;✬&#10;✭&#10;✮&#10;✯&#10;✰&#10;✱&#10;✲&#10;✳&#10;※&#10;✴&#10;✵&#10;✶&#10;✷&#10;✸&#10;✹&#10;✺&#10;✻&#10;✼&#10;✽&#10;✾&#10;✿&#10;❀&#10;❁&#10;❂&#10;❃&#10;❄&#10;❅&#10;❆&#10;❇&#10;❈&#10;❉&#10;❊&#10;❋&#10;☠&#10;☡&#10;☢&#10;☣&#10;☤&#10;☥&#10;☦&#10;☧&#10;☨&#10;☩&#10;☪&#10;☫&#10;☬&#10;☭&#10;☮&#10;☯</string>
     <string name="S.emj2">←&#10;↚&#10;→&#10;↛&#10;↑&#10;↓&#10;↔&#10;↮&#10;↕&#10;↖&#10;↗&#10;↘&#10;↙&#10;↜&#10;↝&#10;↞&#10;↟&#10;↠&#10;↡&#10;↢&#10;↣&#10;↤&#10;↥&#10;↦&#10;↧&#10;↨&#10;↩&#10;↪&#10;↫&#10;↬&#10;↭&#10;↯&#10;↰&#10;↱&#10;↲&#10;↳&#10;↴&#10;↵&#10;↶&#10;↷&#10;↸&#10;↹&#10;↺&#10;↻&#10;↼&#10;↽&#10;↾&#10;↿&#10;⇀&#10;⇁&#10;⇂&#10;⇃&#10;⇄&#10;⇅&#10;⇆&#10;⇇&#10;⇈&#10;⇉&#10;⇊&#10;⇋&#10;⇌&#10;⇐&#10;⇍&#10;⇑&#10;⇒&#10;⇏&#10;⇓&#10;⇔&#10;⇎&#10;⇕</string>
-    <string name="S.emj0">╭(╯^╰)╮&#10;-</string>
+    <string name="S.emj0">❀&#10;╭(╯^╰)╮&#10;-</string>
     <string name="S.emj5">¼&#10;½&#10;¾&#10;⅓&#10;¼&#10;⅛&#10;√&#10;℃&#10;℉&#10;∴&#10;∵&#10;∶&#10;∷&#10;⋮&#10;∞&#10;∝&#10;∃&#10;∟&#10;∠&#10;∧&#10;∨&#10;∀&#10;∩&#10;∪&#10;凵&#10;⊿&#10;∂&#10;∫&#10;∬&#10;∮&#10;∏&#10;∼&#10;∽&#10;≅&#10;≒&#10;≠&#10;≡&#10;≤&#10;≥&#10;≦&#10;≧&#10;≪&#10;≫&#10;⊕&#10;⊗&#10;⊙&#10;⋅&#10;×&#10;╭&#10;∑&#10;∗&#10;∙&#10;∣&#10;∥&#10;≈&#10;≌&#10;≢&#10;≣&#10;⊥&#10;∉&#10;∋&#10;∌&#10;⊂&#10;⊃&#10;⊄&#10;⊅&#10;⊆&#10;⊇&#10;⅕&#10;⅙</string>
     <string name="S.emj6">$&#10;¢&#10;£&#10;¤&#10;¥&#10;₽&#10;֏&#10;؋&#10;৲&#10;৳&#10;৻&#10;૱&#10;௹&#10;฿&#10;៛&#10;₠&#10;₡&#10;₢&#10;₣&#10;₤&#10;₥&#10;₦&#10;₧&#10;₨&#10;₩&#10;₪&#10;₫&#10;€&#10;₭&#10;₮&#10;₯&#10;₰&#10;₱&#10;₲&#10;₳&#10;₴&#10;₵&#10;₶&#10;₷&#10;₸&#10;₹&#10;꠸&#10;﷼&#10;﹩&#10;＄&#10;￠&#10;￡&#10;￥&#10;￦&#10;✘&#10;✔&#10;✓&#10;√&#10;♩&#10;♪&#10;♭&#10;♯&#10;♬&#10;ℒ&#10;ℳ&#10;◀&#10;▶&#10;▼&#10;▲&#10;◣&#10;◥&#10;◢&#10;◤&#10;◆&#10;∆&#10;∇&#10;☜&#10;☞&#10;☏&#10;✆</string>
     <string name="S.emj3">⇖&#10;⇗&#10;⇘&#10;⇙&#10;⇚&#10;⇛&#10;⇜&#10;⇝&#10;⇞&#10;⇟&#10;⇠&#10;⇡&#10;⇢&#10;⇣&#10;⇤&#10;⇥&#10;⇦&#10;⇧&#10;⇨&#10;⇩&#10;⇪&#10;⇫&#10;⇬&#10;⇭&#10;⇮&#10;⇯&#10;⇰&#10;⇱&#10;⇲&#10;⇳&#10;⇴&#10;⇵&#10;⇶&#10;⇷&#10;⇸&#10;⇹&#10;⇺&#10;⇻&#10;⇼&#10;⇽&#10;⇾&#10;⇿&#10;➘&#10;➙&#10;➚&#10;➛&#10;➜&#10;➝&#10;➞&#10;➟&#10;➠&#10;➡&#10;➢&#10;➣&#10;➤&#10;➥&#10;➦&#10;➧&#10;➨&#10;➩&#10;➪&#10;➫&#10;➬&#10;➭&#10;➮&#10;➯&#10;➰&#10;➱&#10;➲&#10;➳&#10;➴&#10;➵&#10;➶&#10;➷&#10;➸&#10;➹&#10;➺&#10;➻&#10;➼&#10;➽&#10;➾&#10;➿&#10;    </string>
@@ -29,9 +29,9 @@
     <boolean name="PK.pk" value="true" />
     <boolean name="Zh.fws" value="false" />
     <string name="I.sp2"></string>
-    <string name="Qiu1zhi1zhe3vi">{&#10;&#9;&quot;title&quot;:&quot;Qiu1zhi1zhe3&quot;,&#10;&#9;&quot;onScreen&quot;:&#10;&#9;{&#10;&#9;&#9;&quot;main&quot;:&#10;&#9;&#9;&#9;[&#10;&#9;&#9;&#9;&quot;1234567890&quot;,&#10;&#9;&#9;&#9;&quot;qwertyuiop&quot;,&#10;&#9;&#9;&#9;&quot;asdfghjkl&quot;,&#10;&#9;&#9;&#9;&quot;[SHIFT]zxcvbnm[DEL]&quot;,&#10;&#9;&#9;&#9;&quot;[TOOL][][EDIT:,][SPACE][][][][SYM:.][ENTER][]&quot;&#10;&#9;&#9;&#9;],&#10;&#9;&#9;&quot;sym&quot;:&#10;&#9;&#9;&#9;[&#10;&#9;&#9;&#9;&quot;£¥€$₹^&amp;*()№√÷&quot;,&#10;&#9;&#9;&#9;&quot;~`{}%_-=|+§∷‡&quot;,&#10;&#9;&#9;&#9;&quot;@[]#/\'\&quot;«»—‐–&quot;,&#10;&#9;&#9;&#9;&quot;…&lt;&gt;!;:?‹›±.,&quot;,&#10;&#9;&#9;&#9;&quot;[TOOL][][EDIT:,][SPACE][][][][SYM:.][ENTER][]&quot;&#10;&#9;&#9;&#9;]&#10;&#9;}&#10;}</string>
+    <string name="Qiu1zhi1zhe3vi">{&#10;&#9;&quot;title&quot;:&quot;Qiu1zhi1zhe3&quot;,&#10;&#9;&quot;onScreen&quot;:&#10;&#9;{&#10;&#9;&#9;&quot;main&quot;:&#10;&#9;&#9;&#9;[&#10;&#9;&#9;&#9;&quot;1234567890&quot;,&#10;&#9;&#9;&#9;&quot;qwertyuiop&quot;,&#10;&#9;&#9;&#9;&quot;asdfghjkl&quot;,&#10;&#9;&#9;&#9;&quot;[SHIFT]zxcvbnm[DEL]&quot;,&#10;&#9;&#9;&#9;&quot;[TOOL][][EDIT:,][SPACE][][][][SYM:.][ENTER][]&quot;&#10;&#9;&#9;&#9;],&#10;&#9;&#9;&quot;sym&quot;:&#10;&#9;&#9;&#9;[&#10;&#9;&#9;&#9;&quot;£¥€$₹^&amp;*()№√÷&quot;,&#10;&#9;&#9;&#9;&quot;~`{}%_-=|+§∷‡&quot;,&#10;&#9;&#9;&#9;&quot;@[]#/\\\'\&quot;«»—‐–&quot;,&#10;&#9;&#9;&#9;&quot;…&lt;&gt;!;:?‹›±.,&quot;,&#10;&#9;&#9;&#9;&quot;[TOOL][][EDIT:,][SPACE][][][][SYM:.][ENTER][]&quot;&#10;&#9;&#9;&#9;]&#10;&#9;}&#10;}</string>
     <boolean name="I.es" value="false" />
-    <int name="V.brh" value="37" />
+    <int name="V.brh" value="40" />
     <boolean name="K.asw" value="false" />
     <int name="K.pd" value="0" />
     <string name="DIYs.vi">Qiu1zhi1zhe3</string>
@@ -53,7 +53,7 @@
     <boolean name="K.pp" value="false" />
     <boolean name="I.ttc" value="true" />
     <boolean name="I.P.vi" value="true" />
-    <int name="V.H" value="705" />
+    <int name="V.H" value="748" />
     <boolean name="I.P.en" value="true" />
     <boolean name="I.crc" value="false" />
     <boolean name="I.nwp" value="true" />
@@ -65,15 +65,15 @@
     <boolean name="I.isbs" value="false" />
     <boolean name="K.skb" value="false" />
     <boolean name="V.sm" value="false" />
-    <int name="K.th" value="34" />
-    <int name="K.fs2" value="77" />
+    <int name="K.th" value="40" />
+    <int name="K.fs2" value="85" />
     <string name="PK.lk">204</string>
     <string name="UD.sz">1000</string>
     <float name="K.rx" value="30.0" />
     <boolean name="L.ncb" value="true" />
     <boolean name="K.sa" value="true" />
     <boolean name="I.APFR" value="false" />
-    <int name="V.bh" value="33" />
+    <int name="V.bh" value="29" />
     <boolean name="V.ds" value="false" />
     <boolean name="PK.vk" value="true" />
     <string name="I.pwlm">16</string>
@@ -133,10 +133,10 @@
     <boolean name="HW.ar" value="true" />
     <string name="S.emj57">-</string>
     <string name="I.acr">[LANG:02]</string>
-    <boolean name="V.fd" value="true" />
+    <boolean name="V.fd" value="false" />
     <string name="K.snd">0</string>
     <boolean name="K.lpl" value="true" />
-    <int name="K.fs" value="90" />
+    <int name="K.fs" value="89" />
     <boolean name="V.FB" value="false" />
     <boolean name="I.VNI" value="false" />
     <string name="lc">vi,en,,,,,,,,,,,,,,,,,,,,,</string>
