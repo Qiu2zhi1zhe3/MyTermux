@@ -6,7 +6,19 @@ launch()
 	package=$(awk -v search="\\\y$inp_name\\\y" -F"|" '$1!=search && match( $0 , search ) {print $1}' $file)
 	su -c am start -n $package --user 0 &> /dev/null
 	echo Launching $inp_name
+	rxfetch
 	exit
+}
+tmuxa()
+{
+	if [[ "$TMUX" == "" ]]; then
+
+  tmux new-session -d -n "●" -s qiu2zhi1zhe3
+  tmux send-keys -t qiu2zhi1zhe3 "c && su" ENTER
+  tmux new-window -d -n "●" -t qiu2zhi1zhe3
+  tmux a -t qiu2zhi1zhe3
+  
+fi
 }
 
 show_suggestions()
@@ -43,12 +55,17 @@ a="1"
 file=$HOME/.app_list
 inp_name=`echo "${@}" | awk '{print tolower($0)}'` 
 #search $inp_name
-case ${@} in
+case $1 in
 
 	#case 1
 	list) 	awk -F"|" '{print $2 " " $3 " " $4}' $file | pr -2 -t
 	;;
-	
+	a) dumpsys package | grep -Eo $(printf "^[[:space:]]+[0-9a-f]+[[:space:]]+%s/[^[:space:]]+" "$2") | grep -oE "[^[:space:]]+$"
+	;;
+	w) echo $2 >> $file
+	;;
+	tmux) tmuxa
+	;;
 	#case 3
 	*) 	search $inp_name
 	;;

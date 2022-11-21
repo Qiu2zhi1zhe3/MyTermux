@@ -1,0 +1,26 @@
+#!/system/bin/sh
+bs=$@
+file="/sdcard/Car.txt"
+search()
+{
+	awk -v search1="$bs" '$2~search1 {print $0}' $file
+}
+case ${1} in
+	a1)
+	echo $bs | awk '{print toupper("C1"$2 " " $3) " "$4}' >> $file
+	#tt=$(echo $bs | awk '{print toupper($2 " " $3) " "$4}')
+	#echo $tt >> $file
+	sort -nk 1 -o $file $file
+	;;
+	a2)
+	echo $bs | awk '{print toupper("C2"$2 " " $3) " "$4}' >> $file
+	sort -nk 1 -o $file $file
+	;;
+	p)
+	line1=$2
+	line2=$3
+	awk -v l1="$line1" -v l2="$line2" 'NR>=l1&&NR<=l2 {print NR " " $0}' $file
+	;;
+	*)  search
+	;;
+esac
