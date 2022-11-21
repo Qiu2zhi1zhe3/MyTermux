@@ -1,4 +1,5 @@
-memy.edx/z.NV|magisk|mg
+com.jozein.xedgepro/.ui.ActivityMain|xedge|xe
+#memy.edx/z.NV|magisk|mg
 com.google.android.apps.translate/.TranslateActivity|translate|tran
 org.isoron.uhabits/.MainActivity|habits|hb
 com.zing.zalo/.ui.SplashActivity|zalo|zl
@@ -9,8 +10,8 @@ com.neverland.alreaderext/com.neverland.viscomp.TMainActivity|reader|rd
 com.mixplorer.silver/com.mixplorer.activities.BrowseActivity|mixplore|mix
 tw.nekomimi.nekogram/org.telegram.ui.LaunchActivity|neko|nk
 com.VCB/.activities.home.SplashActivity|vietcombank|vcb
-com.vinpearl.myvinpearl.app/com.vinpearl.my.Launcher|ilovevin|ilv
-#com.topjohnwu.magisk/.ui.MainActivity|magisk|mg
+com.vinpearl.myvinpearl.app/.MainActivity|ilovevin|ilv
+com.topjohnwu.magisk/.ui.MainActivity|magisk|mg
 com.miui.calculator/.cal.CalculatorActivity|calculator|cal
 com.android.vending/.AssetBrowserActivity|gplay|chplay
 #com.google.android.apps.maps/com.google.android.maps.MapsActivity|maps
@@ -20,4 +21,6 @@ com.android.soundrecorder/.SoundRecorder|rec|rc
 com.miui.securitycenter/com.miui.securityscan.MainActivity|security|sc
 com.android.settings/.MainSettings|settings
 com.android.thememanager/.ThemeResourceTabActivity|themes
-com.google.android.youtube/.app.honeycomb.Shell_HomeActivity|youtube|yt
+com.google.android.youtube/.app.honeycomb.Shell\$HomeActivity|youtube|yt
+#com.google.android.youtube/com.google.android.apps.youtube.app.application.Shell_HomeActivity|youtube|yt
+org.isoron.uhabits/.MainActivity|hi
