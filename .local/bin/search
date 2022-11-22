@@ -10,21 +10,21 @@ search()
 }
 case ${1} in
 	a1)
-	if [[ $(awk -v search1="$var2" '$2~toupper(search1) {print $0}' $file) == "" ]] ; then
+	if [[ $(awk -v search1="$var3" '$2~toupper(search1) {print $0}' $file) == "" ]] ; then
 		echo $bs | awk '{print toupper("C1"$2 " " $3) " "$4}' >> $file
 		echo $bs | awk '{print toupper("C1"$2 " " $3) " "$4}'
 		sort -nk 1 -o $file $file
 	else
-		awk -v search1="$var2" '$2~toupper(search1) {print "TT đã tồn tại: "$0}' $file
+		awk -v search1="$var3" '$2~toupper(search1) {print "TT đã tồn tại: "$0}' $file
 	fi
 	;;
 	a2)
-	if [[ $(awk -v search1="$var2" '$2~toupper(search1) {print $0}' $file) == "" ]] ; then
+	if [[ $(awk -v search1="$var3" '$2~toupper(search1) {print $0}' $file) == "" ]] ; then
 		echo $bs | awk '{print toupper("C2"$2 " " $3) " "$4}' >> $file
 		echo $bs | awk '{print toupper("C2"$2 " " $3) " "$4}'
 		sort -nk 1 -o $file $file
 	else
-		awk -v search1="$var2" '$2~toupper(search1) {print "TT đã tồn tại: "$0}' $file
+		awk -v search1="$var3" '$2~toupper(search1) {print "TT đã tồn tại: "$0}' $file
 	fi
 	;;
 	p)
