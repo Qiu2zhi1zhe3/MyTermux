@@ -1,5 +1,6 @@
 #
 #app
+alias sdl="search d $1"
 alias sp="search p $1"
 alias s="search $1"
 alias s1="search a1 $1"

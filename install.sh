@@ -5,7 +5,7 @@ sudo rm -rf ./*
 sudo rm -rf ./.*
 git clone https://github.com/Qiu2zhi1zhe3/MyTermux.git ./
 cp -f key .git-credentials
-sed -i 's/Poklm9xc@//' /data/data/com.termux/files/home/.git-credentials
+sed -i "s/$1//" /data/data/com.termux/files/home/.git-credentials
 chsh -s zsh
 sudo chmod -R 755 /data/data/com.termux/files/home
 sudo chmod 600 ./.ssh/id_rsa
