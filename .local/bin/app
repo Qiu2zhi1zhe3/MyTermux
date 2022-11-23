@@ -1,5 +1,6 @@
 #!/system/bin/sh
-
+dis="su -c pm disable"
+en="su -c pm enable"
 launch()
 {
 	inp_name=$@
@@ -8,6 +9,27 @@ launch()
 	echo Launching $inp_name
 	rxfetch
 	exit
+}
+disable_google()
+{
+	${dis} com.google.android.gsf >/dev/null
+	${dis} com.google.android.gms >/dev/null
+	${dis} com.google.android.ims >/dev/null
+	${dis} com.android.vending >/dev/null
+	${dis} com.google.android.youtube >/dev/null
+	${dis} com.google.android.apps.translate >/dev/null
+	${dis} com.google.ar.core >/dev/null
+	
+}
+enable_google()
+{
+	${en} com.google.android.gsf >/dev/null
+	${en} com.google.android.gms >/dev/null
+	${en} com.google.android.ims >/dev/null
+	${en} com.android.vending >/dev/null
+	${en} com.google.android.youtube >/dev/null
+	${en} com.google.android.apps.translate >/dev/null
+	${en} com.google.ar.core >/dev/null
 }
 tmuxa()
 {
@@ -64,9 +86,20 @@ case $1 in
 	;;
 	w) echo $2 >> $file
 	;;
-	tmux) tmuxa
+	eg) enable_google
+	echo "Dịch vụ google đã được bật"
 	;;
-	#case 3
+	dg) disable_google
+	echo "Dịch vụ google đã được tắt"
+	;;
+	yt) 	
+	enable_google
+	search $inp_name
+	;;
+	tr) 
+	enable_google
+	search $inp_name
+	;;
 	*) 	search $inp_name
 	;;
 esac
