@@ -1,36 +1,46 @@
 #!/system/bin/sh
+#mount -o remount,rw /cust
 bs=$@
 var1=$1
 var2=$2
 var3=$3
-file="/sdcard/Car.txt"
+file="/cust/app/customized/Backup/RMC.txt"
 search()
 {
-	awk -v search1="$bs" '$2~search1 {print $0}' $file
+	awk -v search1="$bs" -F"." '$2~search1 {print $0}' $file
+}
+add()
+{
+	tk=$(awk -v search="$var3" -F"." '$2~toupper(search) {print NR}' $file)
+	tt=$(echo $bs | awk ' {$1=$1"." ;$2=$2".." ; if($4!="") $3=$3".." ;$1=toupper($1); $2=toupper($2);$3=toupper($3); print }' | awk ' {gsub(/\. /,"");  print $0}')
+	if [[ $tk == "" ]] ; then
+		echo $tt >> $file
+		echo $tt
+		sort -nk 1 -o $file $file
+	else
+		awk -v search="$tk" 'NR==search {print NR " TT đã tồn tại: "$0}' $file
+		echo "Bạn có muốn thay đổi thông tin (ấn "y" để đồng ý )"
+		read lc
+		if [[ $lc=="y" ]] ; then
+		awk -vOFS=, -v search="$tk" -v add="$tt"  'NR==search {sub(/.*/,add)}1' $file > filetmp && mv filetmp $file
+		echo "Đã thay đổi thông tin"
+		echo $tt
+		fi
+	fi
 }
 case ${1} in
-	a1)
-	if [[ $(awk -v search1="$var3" '$2~toupper(search1) {print $0}' $file) == "" ]] ; then
-		echo $bs | awk '{print toupper("C1"$2 " " $3) " "$4}' >> $file
-		echo $bs | awk '{print toupper("C1"$2 " " $3) " "$4}'
-		sort -nk 1 -o $file $file
-	else
-		awk -v search1="$var3" '$2~toupper(search1) {print "TT đã tồn tại: "$0}' $file
-	fi
+	C1)
+	add
 	;;
-	a2)
-	if [[ $(awk -v search1="$var3" '$2~toupper(search1) {print $0}' $file) == "" ]] ; then
-		echo $bs | awk '{print toupper("C2"$2 " " $3) " "$4}' >> $file
-		echo $bs | awk '{print toupper("C2"$2 " " $3) " "$4}'
-		sort -nk 1 -o $file $file
-	else
-		awk -v search1="$var3" '$2~toupper(search1) {print "TT đã tồn tại: "$0}' $file
-	fi
+	C2)
+	add
 	;;
 	p)
 	awk -v l1="$var2" -v l2="$var3" 'NR>=l1&&NR<=l2 {print NR " " $0}' $file
 	;;
 	d)  awk -v n=$var2 'NR == n {next} {print}' $file > tmpfile && mv tmpfile $file
+	;;
+	e)  vim $file
 	;;
 	*)  search
 	;;

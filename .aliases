@@ -1,11 +1,11 @@
 #
 #app
+alias se="search e"
 alias sdl="search d $1"
 alias sp="search p $1"
 alias s="search $1"
-alias s1="search a1 $1"
-alias s1="search a1 $1"
-alias s2="search a2 $1"
+alias s1="search C1 $1"
+alias s2="search C2 $1"
 alias clash="su -c sh /cust/app/customized/Backup/Clash/start.sh $1"
 alias su="su -s /data/data/com.termux/files/usr/bin/zsh"
 alias chplay="open chplay && c"
