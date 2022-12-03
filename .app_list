@@ -13,7 +13,7 @@ com.VCB/.activities.home.SplashActivity|vietcombank|vcb
 com.vinpearl.myvinpearl.app/.MainActivity|ilovevin|ilv
 #com.topjohnwu.magisk/.ui.MainActivity|magisk|mg
 com.miui.calculator/.cal.CalculatorActivity|calculator|cal
-#com.android.vending/.AssetBrowserActivity|gplay|chplay
+com.android.vending/.AssetBrowserActivity|gplay|chplay
 #com.google.android.apps.maps/com.google.android.maps.MapsActivity|maps
 com.android.mms/.ui.MmsTabActivity|messaging|sms
 #com.mxtech.videoplayer.ad/.ActivityWelcomeMX|mx player|mx
@@ -24,5 +24,5 @@ com.android.thememanager/.ThemeResourceTabActivity|themes
 com.google.android.youtube/.app.honeycomb.Shell\$HomeActivity|youtube|yt
 #com.google.android.youtube/com.google.android.apps.youtube.app.application.Shell_HomeActivity|youtube|yt
 org.isoron.uhabits/.MainActivity|habit|hb
-com.aurora.store/.view.ui.onboarding.OnboardingActivity|aurora|chplay
+#com.aurora.store/.view.ui.onboarding.OnboardingActivity|aurora|chplay
 io.github.huskydg.magisk/com.topjohnwu.magisk.ui.MainActivity|magisk|mg
