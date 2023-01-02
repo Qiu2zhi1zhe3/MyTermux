@@ -8,7 +8,7 @@ set expandtab
 set softtabstop=4
 set mouse=a
 set foldmethod=indent
-set signcolumn=yes
+"set signcolumn=yes
 set list
 set listchars=tab:▸\ ,trail:·
 set nobackup
