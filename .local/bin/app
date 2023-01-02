@@ -4,11 +4,7 @@ en="su -c pm enable"
 launch()
 {
 	inp_name=$@
-<<<<<<< HEAD
-	package=$(awk -v search="\\\y$inp_name\\\y" -F"|" '/#/{next} $1!=search && match( $0 , search ) {print $1}' $file)
-=======
 	package=$(awk -v search="\\\y$inp_name\\\y" -F"|" 'BEGIN{IGNORECASE=1} /#/{next} gsub("\\$","\\$",$1) $1!=search && match( $0 , search ) {print $1}' $file)
->>>>>>> main
 	su -c am start -n $package --user 0 &> /dev/null
 	echo Launching $inp_name
 	rxfetch
@@ -63,11 +59,7 @@ show_suggestions()
 search()
 {
 inp_name=$@
-<<<<<<< HEAD
-len=$(awk -v search="\\\y$inp_name\\\y" -F"|" '/#/{next} $1!=search && match( $0 , search )  {count++} END {print count}' $file)
-=======
 len=$(awk -v search="\\\y$inp_name\\\y" -F"|" 'BEGIN{IGNORECASE=1} /#/{next} $1!=search && match( $0 , search )  {count++} END {print count}' $file)
->>>>>>> main
 case $len in
 
 	#case 1
@@ -88,21 +80,14 @@ inp_name=`echo "${@}" | awk '{print tolower($0)}'`
 case $1 in
 
 	#case 1
-<<<<<<< HEAD
-	list) 	awk -F"|" '{print $2 " " $3 " " $4}' $file | pr -2 -t
-=======
 	list) echo "\033[32m" ;	awk -F"|" '/^\s*$/{next} {$2=$2"(" $3","$4")" ; gsub("\\(,)","",$2) ; gsub(",\\)",")",$2) ; print $2}' $file | sort | pr -2 -t
->>>>>>> main
 	;;
 	a) dumpsys package | grep -Eo $(printf "^[[:space:]]+[0-9a-f]+[[:space:]]+%s/[^[:space:]]+" "$2") | grep -oE "[^[:space:]]+$"
 	;;
 	w) echo $2 >> $file
 	;;
-<<<<<<< HEAD
-=======
 	update) awk -F "|" '/^\s*$|#/{next}{ a[$1]=$2"|"$3"|"$4 } END { for (i in a) {gsub("\\||,\\|$","",a[i]) ; print i "|" a[i]}  }' /sdcard/MIUI/.apps $HOME/.app_list | sort -o $HOME/.app_list 
 	;;
->>>>>>> main
 	eg) enable_google
 	echo "Dịch vụ google đã được bật"
 	;;
