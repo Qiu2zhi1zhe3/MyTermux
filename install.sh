@@ -1,9 +1,9 @@
 apt update -y && apt upgrade -y
 apt update
-apt install git zsh openssh tmux exa tsu -y
+apt install git zsh openssh tmux exa tsu neovim -y
 sudo rm -rf ./*
 sudo rm -rf ./.*
-git clone https://github.com/Qiu2zhi1zhe3/MyTermux.git ./
+git clone -b dev https://github.com/Qiu2zhi1zhe3/MyTermux.git ./
 cp -f key .git-credentials
 sed -i "s/$1//" /data/data/com.termux/files/home/.git-credentials
 chsh -s zsh
