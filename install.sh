@@ -1,6 +1,6 @@
 apt update -y && apt upgrade -y
 apt update
-apt install git zsh openssh tmux exa tsu neovim -y
+apt install git zsh openssh tmux exa tsu neovim fzf -y
 sudo rm -rf ./*
 sudo rm -rf ./.*
 git clone -b dev https://github.com/Qiu2zhi1zhe3/MyTermux.git ./
@@ -10,6 +10,12 @@ sed -i "s/$a//" /data/data/com.termux/files/home/.git-credentials
 chsh -s zsh
 sudo chmod -R 755 /data/data/com.termux/files/home
 sudo chmod 600 ./.ssh/id_rsa
+su -c 'mount -o remount,rw /'
+su -c 'cat << EOF > /.zshrc
+export HOME="/data/data/com.termux/files/home"
+source \$HOME/.zshrc
+c
+EOF'
 sudo cp .config/kl.ime.oh_preferences.xml /data/data/kl.ime.oh/shared_prefs/
 sudo chmod 660 /data/data/kl.ime.oh/shared_prefs/kl.ime.oh_preferences.xml
 a=`sudo awk '/^kl.ime.oh/ {print $2}' /data/system/packages.list`

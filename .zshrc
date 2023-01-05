@@ -39,7 +39,7 @@ autoload -U compinit && compinit
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run.
 
-zstyle ':completion:*' insert-tab false        # Автокомплит для первого символа
+zstyle ':completion:*' insert-tab false        # Tự động điền cho ký tự đầu tiên
 
 HISTFILE=~/.zhistory
 ## Số lệnh được lưu trữ trong HISTFILE
