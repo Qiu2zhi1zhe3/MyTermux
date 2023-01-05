@@ -12,7 +12,7 @@ sudo chmod -R 755 /data/data/com.termux/files/home
 sudo chmod 600 ./.ssh/id_rsa
 su -c 'mount -o remount,rw /'
 su -c 'cat << EOF > /.zshrc
-export HOME="/data/data/com.termux/files/home"
+HOME="/data/data/com.termux/files/home"
 source \$HOME/.zshrc
 c
 EOF'
