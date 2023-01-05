@@ -32,9 +32,10 @@ com.xiaomi.smarthome/.SmartHomeMainActivity|Xiaomi Home
 com.zhiliaoapp.musically/com.ss.android.ugc.aweme.splash.SplashActivity|TikTok
 com.zing.zalo/.ui.SplashActivity|Zalo
 hacking.learnhacking.learn.hack.ethicalhacking.programming.coding.hackerx.cybersecurity/com.projectx.hackerx.MainActivity|Hacker X
-io.github.huskydg.magisk/com.topjohnwu.magisk.ui.MainActivity|Magisk Delta
+#io.github.huskydg.magisk/com.topjohnwu.magisk.ui.MainActivity|Magisk Delta
 kl.ime.oh/.M|Multiling O Keyboard
 mark.via.gp/mark.via.Shell|Via
 org.isoron.uhabits/.MainActivity|Habits
 org.stepic.droid/.view.activities.SplashActivity|Stepik
 tw.nekomimi.nekogram/org.telegram.messenger.DefaultIcon|Nekogram
+com.topjohnwu.magisk/.core.SplashActivity|Magisk
