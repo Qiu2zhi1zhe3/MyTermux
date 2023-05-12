@@ -7,7 +7,8 @@ var3=$3
 file="/cust/app/customized/Backup/RMC.txt"
 search()
 {
-	awk -v search1="$bs" -F"." '$2~search1 {print $0}' $file
+	awk -v search1="$bs" -F"." '$2~search1 {print $0 }' $file
+	date "+%H:%M"
 }
 add()
 {

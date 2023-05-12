@@ -5,7 +5,7 @@ launch()
 {
 	inp_name=$@
 	package=$(awk -v search="\\\y$inp_name\\\y" -F"|" 'BEGIN{IGNORECASE=1} /#/{next} gsub("\\$","\\$",$1) $1!=search && match( $0 , search ) {print $1}' $file)
-	su -c am start -n $package --user 0 &> /dev/null
+	su -c "am start -n $package --user 0 &> /dev/null"
 	echo Launching $inp_name
 	rxfetch
 	exit

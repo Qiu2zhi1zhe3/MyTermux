@@ -15,7 +15,7 @@ echo -e "\e[4 q"
 if [[ "$TMUX" == "" ]]; then
 
   tmux new-session -d -n "●" -s qiu2zhi1zhe3
-  tmux send-keys -t qiu2zhi1zhe3 "c && su" ENTER
+  tmux send-keys -t qiu2zhi1zhe3 "c && suz" ENTER
   tmux new-window -d -n "●" -t qiu2zhi1zhe3
   tmux a -t qiu2zhi1zhe3
   

@@ -3,7 +3,7 @@ ZSH_DISABLE_COMPFIX=true
 ZSH_THEME="osx"
 plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting bgnotify)
 PREFIX="/data/data/com.termux/files/usr"
-PATH="$PREFIX/bin:$HOME/.local/bin:$PATH:/system/xbin"
+PATH="/system/bin:$PREFIX/bin:$HOME/.local/bin:$PATH:/system/xbin:$HOME/go/bin"
 export PATH
 
 export TERM=xterm-256color 
