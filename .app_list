@@ -1,41 +1,31 @@
-amsitlab.android.apps.termuxlauncher/.MainActivity|TermuxLauncher
-com.VCB/.activities.home.SplashActivity|Vietcombank
-com.alensw.PicFolder/.GalleryActivity|QuickPic
-com.android.camera/.Camera|Camera
-com.android.contacts/.activities.PeopleActivity|Contacts and dialer
-com.android.deskclock/.DeskClockTabActivity|Clock
-com.android.mms/.ui.MmsTabActivity|Messaging
-com.android.settings/.MainSettings|Settings
-com.android.soundrecorder/.SoundRecorder|Recorder
-com.android.thememanager/.ThemeResourceTabActivity|Themes
-com.android.vending/.AssetBrowserActivity|Google Play Store
-com.bplus.vtpay/.activity.SplashScreen|Viettel Money
-com.cocoswing.tedict/com.egloos.talkdict.InitialActivity|TEDICT
-com.discord/.main.MainActivity|Discord
-com.getmimo/.ui.SplashActivity|Mimo
-com.google.android.apps.maps/com.google.android.maps.MapsActivity|Maps
-com.google.android.apps.translate/.TranslateActivity|Translate
-com.google.android.youtube/.app.honeycomb.Shell$HomeActivity|YouTube
-com.jozein.xedgepro/.ui.ActivityMain|Xposed edge pro
-com.meenstudio.golang/.MainActivity|Learn Go-Lang
-com.miui.securitycenter/com.miui.securityscan.MainActivity|Security
-com.mixplorer.silver/com.mixplorer.activities.BrowseActivity|MiXplorer
-com.mservice.momotransfer/vn.momo.platform.MainActivity|MoMo
-com.neverland.alreaderext/com.neverland.viscomp.TMainActivity|AlReaderX
-com.sarkaricourse.ciscoccnacourse/io.kodular.sarkaricourse.ciscoccnacourse.Screen1|CISCO CCNA
-com.shopee.vn/com.shopee.app.ui.home.HomeActivity_|Shopee
-com.termux/.app.TermuxActivity|Termux
-com.vinhome.elearning/com.vinhomes.elearning.SplashActivity|Vinhomes LMS
-com.vinpearl.myvinpearl.app/.MainActivity|IloveVingroup
-com.vttm.vietteldiscovery/com.vttm.myviettelV2.activity.NFirstUserActivity|My Viettel
-com.xiaomi.smarthome/.SmartHomeMainActivity|Xiaomi Home
-com.zhiliaoapp.musically/com.ss.android.ugc.aweme.splash.SplashActivity|TikTok
-com.zing.zalo/.ui.SplashActivity|Zalo
-hacking.learnhacking.learn.hack.ethicalhacking.programming.coding.hackerx.cybersecurity/com.projectx.hackerx.MainActivity|Hacker X
-#io.github.huskydg.magisk/com.topjohnwu.magisk.ui.MainActivity|Magisk Delta
-kl.ime.oh/.M|Multiling O Keyboard
-mark.via.gp/mark.via.Shell|Via
-org.isoron.uhabits/.MainActivity|Habits
-org.stepic.droid/.view.activities.SplashActivity|Stepik
-tw.nekomimi.nekogram/org.telegram.messenger.DefaultIcon|Nekogram
-com.topjohnwu.magisk/.core.SplashActivity|Magisk
+amsitlab.android.apps.termuxlauncher/.MainActivity|TermuxLauncher|
+com.VCB/.activities.home.SplashActivity|VCB Digibank|vcb
+com.alensw.PicFolder/.GalleryActivity|QuickPic|
+com.android.camera/.Camera|Camera|
+com.android.contacts/.activities.PeopleActivity|Contacts and dialer|
+com.android.deskclock/.DeskClockTabActivity|Clock|
+com.android.mms/.ui.MmsTabActivity|Messaging|
+com.android.settings/.MainSettings|Settings|
+com.android.soundrecorder/.SoundRecorder|Recorder|
+com.android.thememanager/.ThemeResourceTabActivity|Themes|
+com.android.vending/.AssetBrowserActivity|Google Play Store|
+com.cocoswing.tedict/com.egloos.talkdict.InitialActivity|TEDICT|
+com.dragonnest.drawnote/com.dragonnest.app.EmptyLauncherActivity|DrawNote|
+com.facebook.orca/.auth.StartScreenActivity|Messenger|
+com.google.android.gms/org.microg.gms.ui.SettingsActivity|microG Services Core|
+com.jozein.xedgepro/.ui.ActivityMain|Xposed edge pro|
+com.meienwei.headset/.ui.activity.SplashActivity|向日葵声学|
+com.miui.securitycenter/com.miui.securityscan.MainActivity|Security|
+com.mixplorer.silver/com.mixplorer.activities.BrowseActivity|MiXplorer|
+com.neverland.alreaderext/com.neverland.viscomp.TMainActivity|AlReaderX|
+com.termux/.app.TermuxActivity|Termux|
+com.vinhome.elearning/com.vinhomes.elearning.SplashActivity|Vinhomes LMS|lms
+com.vinpearl.myvinpearl.app/.MainActivity|IloveVingroup|ilv
+com.vnid/.MainActivity|VNeID|
+com.zing.zalo/.ui.SplashActivity|Zalo|
+in.krosbits.musicolet/.MusicActivity|Musicolet|
+kl.ime.oh/.M|Multiling O Keyboard|
+mark.via.gp/mark.via.Shell|Via|
+me.weishu.kernelsu/.ui.MainActivity|KernelSU|ksu
+org.schabi.newpipe/.MainActivity|NewPipe|yt
+tw.nekomimi.nekogram/org.telegram.messenger.DefaultIcon|Nekogram|

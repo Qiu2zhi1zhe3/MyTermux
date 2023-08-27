@@ -75,18 +75,23 @@ esac
 esc_count="0"
 a="1"
 file=$HOME/.app_list
+file1="/sdcard/MIUI/.apps"
 inp_name=`echo "${@}" | awk '{print tolower($0)}'` 
 #search $inp_name
 case $1 in
 
 	#case 1
-	list) echo "\033[32m" ;	awk -F"|" '/^\s*$/{next} {$2=$2"(" $3","$4")" ; gsub("\\(,)","",$2) ; gsub(",\\)",")",$2) ; print $2}' $file | sort | pr -2 -t
+	"") name=$(awk -F"|" '/^\s*$|#/{next} !/^ /{$2=$2"(" $3","$4")" ; gsub("\\(,)","",$2) ; gsub(",\\)",")",$2) ; print $2}' $file1 | sort | fzf --pointer "" --no-bold --color fg+:#F1948A,bg+:#1d2021,hl+:#fabd2f --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#d8ef9f,marker:#a3ff00,header:#665c54)
+	if [ -n "$name" ]; then
+	launch $name
+	fi
 	;;
 	a) dumpsys package | grep -Eo $(printf "^[[:space:]]+[0-9a-f]+[[:space:]]+%s/[^[:space:]]+" "$2") | grep -oE "[^[:space:]]+$"
 	;;
 	w) echo $2 >> $file
 	;;
-	update) awk -F "|" '/^\s*$|#/{next}{ a[$1]=$2"|"$3"|"$4 } END { for (i in a) {gsub("\\||,\\|$","",a[i]) ; print i "|" a[i]}  }' /sdcard/MIUI/.apps $HOME/.app_list | sort -o $HOME/.app_list 
+	update) #awk -F "|" 'FNR==NR {data[$1]=$0; next} {$1=data[$1]}1' /sdcard/MIUI/.apps $HOME/.app_list
+ awk -F "|" '/^\s*$|#/{next}{ a[$1]=$2"|"$3"|"$4 } END { for (i in a) {gsub("\\|$","",a[i]) ; print i "|" a[i] } }' /sdcard/MIUI/.apps $HOME/.app_list | sort -o $HOME/.app_list 
 	;;
 	eg) enable_google
 	echo "Dịch vụ google đã được bật"
