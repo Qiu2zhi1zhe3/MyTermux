@@ -56,7 +56,7 @@
     <int name="V.H" value="748" />
     <boolean name="I.P.en" value="true" />
     <boolean name="I.crc" value="false" />
-    <boolean name="I.nwp" value="true" />
+    <boolean name="I.nwp" value="false" />
     <int name="V.W" value="1080" />
     <int name="V.Y" value="1571" />
     <int name="V.X" value="0" />
@@ -92,7 +92,7 @@
     <string name="I.asp">[LANG:01]</string>
     <boolean name="V.fs" value="false" />
     <string name="K.gs23">[DOWN]</string>
-    <long name="lovi" value="429514360165" />
+    <long name="lovi" value="5973542245" />
     <int name="K.gh" value="0" />
     <string name="K.gi">0</string>
     <string name="AP.seq">a</string>

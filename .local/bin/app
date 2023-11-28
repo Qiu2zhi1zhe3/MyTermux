@@ -1,112 +1,78 @@
 #!/system/bin/sh
-dis="su -c pm disable"
-en="su -c pm enable"
-launch()
-{
-	inp_name=$@
-	package=$(awk -v search="\\\y$inp_name\\\y" -F"|" 'BEGIN{IGNORECASE=1} /#/{next} gsub("\\$","\\$",$1) $1!=search && match( $0 , search ) {print $1}' $file1)
-	su -c "am start -n $package --user 0 &> /dev/null"
-	echo Launching $inp_name
-	rxfetch
-	exit
-}
-disable_google()
-{
-	${dis} com.google.android.gsf >/dev/null
-	${dis} com.google.android.gms >/dev/null
-	${dis} com.google.android.ims >/dev/null
-	${dis} com.android.vending >/dev/null
-	${dis} com.google.android.youtube >/dev/null
-	${dis} com.google.android.apps.translate >/dev/null
-	${dis} com.google.ar.core >/dev/null
-	
-}
-enable_google()
-{
-	${en} com.google.android.gsf >/dev/null
-	${en} com.google.android.gms >/dev/null
-	${en} com.google.android.ims >/dev/null
-	${en} com.android.vending >/dev/null
-	${en} com.google.android.youtube >/dev/null
-	${en} com.google.android.apps.translate >/dev/null
-	${en} com.google.ar.core >/dev/null
-}
-tmuxa()
-{
-	if [[ "$TMUX" == "" ]]; then
 
-  tmux new-session -d -n "●" -s qiu2zhi1zhe3
-  tmux send-keys -t qiu2zhi1zhe3 "c && su" ENTER
-  tmux new-window -d -n "●" -t qiu2zhi1zhe3
-  tmux a -t qiu2zhi1zhe3
-  
-fi
+print_ERR_and_die(){
+    # Error printing function
+    printf "\e[38;5;1m[!]%s\n\e[m"\
+           "$*" 1>&2
+    exit 1
 }
 
-show_suggestions()
-{
-	app=$(awk -v search="$1" -F"|" ' $1 ~ search {print $1}' $file | echo)
-	if [ "$esc_count" == "$a" ]
-	then
-		esc_count="0"
-		exit
-	fi
-	esc_count="1"
-	search $app
+show_help(){
+    printf  "%s\n"\
+            "tel-app [OPTIONS] [PATTERN]"\
+            "__________________________"\
+            "OPTIONS"\
+            "  -h   display this help message"\
+            "  -u   update app cache"
 }
 
+update_cache(){
+    # Android Black Magic
+    printf  "\e[38;5;2m Launcher\e[m: \e[38;5;1mUpdating app cache...%s\n\e[m"
+    am broadcast --user 0 \
+         --es com.termux.app.reload_style apps-cache \
+         -a com.termux.app.reload_style com.termux > /dev/null
+}
 
-search()
-{
-inp_name=$@
-len=$(awk -v search="\\\y$inp_name\\\y" -F"|" 'BEGIN{IGNORECASE=1} /#/{next} $1!=search && match( $0 , search )  {count++} END {print count}' $file)
-case $len in
-
-	#case 1
-	1) 	launch $inp_name
-	;;
-	
-	#case 3
-	*) 	echo "Không Tìm Thấy"
-	;;
+main(){
+    cachefile="$HOME/.apps"
+    app_namefile="$HOME/.app_names"
+    case "$1" in
+        # Update the app list
+        # Incase a new app has been installed
+        -u)
+            update_cache
+            exit 0
+        ;;
+        # Display the help message
+        -h)
+            show_help
+            exit 0
+        ;;
+    esac
+    if [ ! -f $cachefile ] || [ ! -f $app_namefile ] ; then
+	    update_cache
+    fi
+    # fuzzy search in $app_namefile to get the app code and app 
+    # name in this format 
+    # app_code | app_name
+    app_data=$(awk -F"|" '/^\s*$|#/{next}{ print $0}' "$app_namefile" | fzf -e --cycle --prompt=" Launch app: " --query="$*" --pointer "" --no-bold --color fg+:#F1948A,bg+:#1d2021,hl+:#fabd2f --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#d8ef9f,marker:#a3ff00,header:#665c54)
+    #app_data=$(fzf -e --cycle --prompt=" Launch app: " --query="$*" --color=16 --select-1 -0 < "$app_namefile")
+    case "$?" in
+        # No app found
+        "1"  )
+    		printf  "\e[38;5;2m Launcher\e[m: \e[38;5;1mApp not found%s\n\e[m"
+		exit 1
+        ;;
+        # If Ctrl+C is used 
+        "130")
+            return 1
+        ;;
 esac
+    # get the app code
+    app_code=$( echo "$app_data" | cut -d "|" -f1) 
+    # get the app name
+    app_name=$( echo "$app_data" | cut -d "|" -f2) 
+    
+    # No app name recieved
+    [[ -z "$app_code" ]] && exit 1
 
+    # get the activity name
+    activity=$( grep "$app_code" "$cachefile" | cut -d "|" -f2 )
+    printf  "\e[38;5;2m Launching\e[m %s\n"\
+            "$app_name"
+
+    # Laucnh the app
+    am start -n "$activity" --user 0 > /dev/null 2>&1
 }
-esc_count="0"
-a="1"
-file=$HOME/.app_list
-file1="/sdcard/MIUI/.apps"
-inp_name=`echo "${@}" | awk '{print tolower($0)}'` 
-#search $inp_name
-case $1 in
-
-	#case 1
-	"") name=$(awk -F"|" '/^\s*$|#/{next} !/^ /{$2=$2"(" $3","$4")" ; gsub("\\(,)","",$2) ; gsub(",\\)",")",$2) ; print $2}' $file1 | sort | fzf --pointer "" --no-bold --color fg+:#F1948A,bg+:#1d2021,hl+:#fabd2f --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#d8ef9f,marker:#a3ff00,header:#665c54)
-	if [ -n "$name" ]; then
-	launch $name
-	fi
-	;;
-	a) dumpsys package | grep -Eo $(printf "^[[:space:]]+[0-9a-f]+[[:space:]]+%s/[^[:space:]]+" "$2") | grep -oE "[^[:space:]]+$"
-	;;
-	w) echo $2 >> $file
-	;;
-	update) #awk -F "|" 'FNR==NR {data[$1]=$0; next} {$1=data[$1]}1' /sdcard/MIUI/.apps $HOME/.app_list
- awk -F "|" '/^\s*$|#/{next}{ a[$1]=$2"|"$3"|"$4 } END { for (i in a) {gsub("\\|$","",a[i]) ; print i "|" a[i] } }' /sdcard/MIUI/.apps $HOME/.app_list | sort -o $HOME/.app_list 
-	;;
-	eg) enable_google
-	echo "Dịch vụ google đã được bật"
-	;;
-	dg) disable_google
-	echo "Dịch vụ google đã được tắt"
-	;;
-	yt) 	
-	enable_google
-	search $inp_name
-	;;
-	tr) 
-	enable_google
-	search $inp_name
-	;;
-	*) 	search $inp_name
-	;;
-esac
+main "$@"
