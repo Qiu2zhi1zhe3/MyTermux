@@ -4,7 +4,7 @@ bs=$@
 var1=$1
 var2=$2
 var3=$3
-file="/cust/app/customized/Qiu2zhi1zhe3/RMC.txt"
+file="/data/data/com.termux/files/home/.local/data/RMC.txt"
 search()
 {
 	awk -v search1="$bs" -F"." '$2~search1 {print $0 }' $file
