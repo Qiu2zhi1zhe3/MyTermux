@@ -1,6 +1,6 @@
 apt update -y && apt upgrade -y
 apt update
-apt install git zsh openssh tmux exa tsu neovim fzf -y
+apt install git zsh openssh tmux eza tsu neovim fzf -y
 sudo rm -rf ./*
 sudo rm -rf ./.*
 git clone -b dev https://github.com/Qiu2zhi1zhe3/MyTermux.git ./
