@@ -18,7 +18,7 @@ add()
 		echo $tt >> $file
 		echo $tt
 		sort -nk 1 -o $file $file
-		git commit -a -m "update RMC"
+		git commit -m "update RMC" .local/data/RMC.txt
 		git push
 	else
 		awk -v search="$tk" 'NR==search {print NR " TT đã tồn tại: "$0}' $file
@@ -28,8 +28,8 @@ add()
 		awk -vOFS=, -v search="$tk" -v add="$tt"  'NR==search {sub(/.*/,add)}1' $file > filetmp && mv filetmp $file
 		echo "Đã thay đổi thông tin"
 		echo $tt
-		git commit -a -m "update RMC"
-		git push
+		git commit -a -m "update RMC" > /dev/null 2>&1
+		git push > /dev/null 2>&1
 		fi
 	fi
 }
