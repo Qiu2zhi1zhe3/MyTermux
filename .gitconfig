@@ -7,3 +7,5 @@
 	ui = auto
 [init]
 	defaultBranch = main
+[safe]
+	directory = /data/data/com.termux/files/home
